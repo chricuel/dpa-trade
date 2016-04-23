@@ -1,2 +1,3 @@
-# test amaury
+
 # dpa-trade
+Es primera tarea del proyecto
