@@ -11,6 +11,6 @@ do
 	do
 		echo curl ftp://ftp2.sat.gob.mx/aduanas/$year/Balanza_publica/$month/t$table.zip -O >> $base/download_$year.sh
 		echo aws s3 cp t$table.zip s3://aduanas/$year/Balanza_publica/$month/ >> $base/download_$year.sh
-		echo rm cp t$table.zip >> $base/download_$year.sh
+		echo rm t$table.zip >> $base/download_$year.sh
 	done
 done
