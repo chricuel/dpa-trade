@@ -13,6 +13,9 @@ rm t504.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/julio/t505.zip -O
 aws s3 cp t505.zip s3://aduanas/2015/Balanza_publica/julio/
 rm t505.zip
+curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/julio/t506.zip -O
+aws s3 cp t506.zip s3://aduanas/2015/Balanza_publica/julio/
+rm t506.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/julio/t507.zip -O
 aws s3 cp t507.zip s3://aduanas/2015/Balanza_publica/julio/
 rm t507.zip

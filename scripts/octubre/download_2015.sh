@@ -13,6 +13,9 @@ rm t504.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/octubre/t505.zip -O
 aws s3 cp t505.zip s3://aduanas/2015/Balanza_publica/octubre/
 rm t505.zip
+curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/octubre/t506.zip -O
+aws s3 cp t506.zip s3://aduanas/2015/Balanza_publica/octubre/
+rm t506.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/octubre/t507.zip -O
 aws s3 cp t507.zip s3://aduanas/2015/Balanza_publica/octubre/
 rm t507.zip

@@ -13,6 +13,9 @@ rm t504.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/abril/t505.zip -O
 aws s3 cp t505.zip s3://aduanas/2015/Balanza_publica/abril/
 rm t505.zip
+curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/abril/t506.zip -O
+aws s3 cp t506.zip s3://aduanas/2015/Balanza_publica/abril/
+rm t506.zip
 curl ftp://ftp2.sat.gob.mx/aduanas/2015/Balanza_publica/abril/t507.zip -O
 aws s3 cp t507.zip s3://aduanas/2015/Balanza_publica/abril/
 rm t507.zip
