@@ -4,6 +4,7 @@ from sqlalchemy import Column, ForeignKey, Integer, String, Float, Date
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship
 from sqlalchemy import create_engine
+from sshtunnel import SSHTunnelForwarder
  
 BASE = declarative_base()
 
@@ -288,6 +289,15 @@ class ContribucionesDeLaPartida(BASE):
     fecha_de_balanza = Column(Date())
     fecha_de_pago_real = Column(Date())
 
-ENGINE = create_engine('sqlite:///dpa.db')
-BASE.metadata.drop_all(ENGINE)
-BASE.metadata.create_all(ENGINE)
+if __name__ == '__main__':
+    with SSHTunnelForwarder(
+        (sys.argv[1], 22),
+        ssh_username=sys.argv[2],
+        ssh_password=sys.argv[3],
+        remote_bind_address=('127.0.0.1', 5432)
+    ) as server:
+        engine_url = 'postgres://%s:%s@localhost:%s/aduanas' %(sys.argv[4], sys.argv[5], server.local_bind_port)
+        print engine_url
+        ENGINE = create_engine(engine_url)
+        BASE.metadata.drop_all(ENGINE)
+        BASE.metadata.create_all(ENGINE)    
